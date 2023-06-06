@@ -31,7 +31,7 @@ class ActividadController extends Controller
         $actividad = new Actividad();
         $actividad -> descripcion = $request -> input('descripcion');
         $actividad -> nota = $request -> input('nota');
-        $actividad -> codigoEstidiante = $request -> input('codigoEstudiante');
+        $actividad -> codigoEstudiante = $request -> input('codigoEstudiante');
         $actividad -> save();
         return response(json_encode([
             "data" => "Actividad registrada"
@@ -64,7 +64,6 @@ class ActividadController extends Controller
         $actividad = Actividad::find($id);
         $actividad -> descripcion = $request -> input('descripcion');
         $actividad -> nota = $request -> input('nota');
-        $actividad -> codigoEstidiante = $request -> input('codigoEstudiante');
         $actividad -> save();
         return response(json_encode([
             "data" => "Actividad actualizada"
